@@ -9,7 +9,7 @@
   position: fixed;
   width: 100%;
   height: 100vh;
-  background: #fff url("/assets/loading.gif") no-repeat center;
+  background: #fff url("assets/loading.gif") no-repeat center;
   z-index: 99999;
 }
 
@@ -161,7 +161,7 @@ ul li a {
   display: flex;
   width: 100vw;
   height: 120vh;
-  background: url("/assets/footer.jpeg");
+  background: url("assets/footer.jpeg");
   background-size: cover;
   box-shadow: inset 0 0 2000px 2000px rgba(20, 20, 20, 0.451);
   flex-direction: row;
@@ -206,37 +206,37 @@ ul li a {
 
 @-webkit-keyframes carousel {
   0% {
-    background-image: url("/assets/meeting 1.jpeg");
+    background-image: url("assets/meeting 1.jpeg");
   }
   25% {
-    background-image: url("/assets/meeting 2.jpeg");
+    background-image: url("assets/meeting 2.jpeg");
   }
   50% {
-    background-image: url("/assets/meeting 3.jpeg");
+    background-image: url("assets/meeting 3.jpeg");
   }
   75% {
-    background-image: url("/assets/meeting 6.jpeg");
+    background-image: url("assets/meeting 6.jpeg");
   }
   100% {
-    background-image: url("/assets/meeting 4.jpeg");
+    background-image: url("assets/meeting 4.jpeg");
   }
 }
 
 @keyframes carousel {
   0% {
-    background-image: url("/assets/meeting 1.jpeg");
+    background-image: url("assets/meeting 1.jpeg");
   }
   25% {
-    background-image: url("/assets/meeting 2.jpeg");
+    background-image: url("assets/meeting 2.jpeg");
   }
   50% {
-    background-image: url("/assets/meeting 3.jpeg");
+    background-image: url("assets/meeting 3.jpeg");
   }
   75% {
-    background-image: url("/assets/meeting 6.jpeg");
+    background-image: url("assets/meeting 6.jpeg");
   }
   100% {
-    background-image: url("/assets/meeting 4.jpeg");
+    background-image: url("assets/meeting 4.jpeg");
   }
 }
 section {
@@ -306,7 +306,7 @@ section {
 .service {
   height: 100%;
   position: relative;
-  background: url("/assets/footer.jpeg");
+  background: url("assets/footer.jpeg");
   background-size: cover;
   box-shadow: inset 0 0 2000px 2000px rgba(20, 20, 20, 0.451);
   text-align: center;
@@ -426,7 +426,7 @@ section {
   padding: 2em;
   width: 100vw;
   text-align: center;
-  background: url("/assets/footer.jpeg");
+  background: url("assets/footer.jpeg");
   background-size: cover;
   box-shadow: inset 0 0 0 2000px rgba(20, 20, 20, 0.451);
 }

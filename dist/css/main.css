@@ -1,0 +1,749 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Montserrat;
+  box-sizing: border-box;
+}
+
+.loading {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #fff url("/assets/loading.gif") no-repeat center;
+  z-index: 99999;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100vw;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  font-family: "Roboto";
+}
+
+.sectionheading {
+  font-weight: 700;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 3em;
+  color: black;
+  text-transform: uppercase;
+  font-weight: 900;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: black;
+  padding: 1em 0;
+}
+
+h3 {
+  font-size: 1em;
+}
+
+p {
+  text-align: center;
+  padding: 1em;
+}
+
+ul {
+  list-style: none;
+}
+ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.yellow {
+  color: #ecb715 !important;
+  font-weight: 900;
+}
+
+.black {
+  font-weight: 700;
+}
+
+.button {
+  padding: 0.5em 1em;
+  border-radius: 2em;
+  border: none;
+  background-color: #ecb715;
+  color: black;
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.button:hover {
+  background-color: black;
+  color: #ecb715;
+}
+
+.header {
+  position: relative;
+  padding: 2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100vw;
+}
+.header .logo {
+  font-size: 2em;
+  font-weight: 700;
+  color: white;
+}
+.header nav {
+  z-index: 999;
+  background-color: #ecb715;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  transform: translateX(100vw);
+  transition: all 0.3s ease-in-out;
+}
+.header nav ul {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  gap: 1em;
+}
+.header nav ul li {
+  width: 100%;
+}
+.header nav ul li a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 2em;
+  font-weight: 500;
+}
+.header nav ul li a:hover {
+  background-color: white;
+  color: #ecb715;
+}
+.header nav ul .close {
+  position: absolute;
+  padding: 2em;
+  right: 0;
+  top: 0;
+}
+
+.show {
+  transform: translateX(0) !important;
+}
+
+.hero {
+  height: 120vh;
+  background-color: rgb(165, 165, 165);
+  z-index: -99;
+  position: relative;
+  top: -6.6em;
+  padding: 0;
+  margin-bottom: -6em;
+}
+.hero .carouselcontainer {
+  display: flex;
+  width: 100vw;
+  height: 120vh;
+  background: url("/assets/footer.jpeg");
+  background-size: cover;
+  box-shadow: inset 0 0 2000px 2000px rgba(20, 20, 20, 0.451);
+  flex-direction: row;
+  scroll-behavior: smooth;
+  overflow: hidden;
+  -webkit-animation-delay: 10s;
+          animation-delay: 10s;
+  -webkit-animation-name: carousel;
+          animation-name: carousel;
+  -webkit-animation-duration: 60s;
+          animation-duration: 60s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.hero .carouselcontainer::-webkit-scrollbar {
+  display: none;
+}
+.hero .carouselcontainer .container1 {
+  position: absolute;
+  margin: 0 auto;
+  top: 30%;
+}
+.hero .carouselcontainer .container1 h1, .hero .carouselcontainer .container1 p {
+  color: white;
+}
+.hero .carouselcontainer .container1 .buttonpair {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+.hero .carouselcontainer .container1 .buttonpair .Registernow {
+  background-color: black;
+  color: #ecb715;
+}
+.hero .carouselcontainer .container1 .buttonpair .Registernow:hover {
+  color: black;
+  background-color: #ecb715;
+}
+
+@-webkit-keyframes carousel {
+  0% {
+    background-image: url("/assets/meeting 1.jpeg");
+  }
+  25% {
+    background-image: url("/assets/meeting 2.jpeg");
+  }
+  50% {
+    background-image: url("/assets/meeting 3.jpeg");
+  }
+  75% {
+    background-image: url("/assets/meeting 6.jpeg");
+  }
+  100% {
+    background-image: url("/assets/meeting 4.jpeg");
+  }
+}
+
+@keyframes carousel {
+  0% {
+    background-image: url("/assets/meeting 1.jpeg");
+  }
+  25% {
+    background-image: url("/assets/meeting 2.jpeg");
+  }
+  50% {
+    background-image: url("/assets/meeting 3.jpeg");
+  }
+  75% {
+    background-image: url("/assets/meeting 6.jpeg");
+  }
+  100% {
+    background-image: url("/assets/meeting 4.jpeg");
+  }
+}
+section {
+  padding: 2em 2em;
+}
+
+.aboutus {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 50%;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+.aboutus .leftcontainer {
+  flex: 1;
+  text-align: center;
+}
+.aboutus .leftcontainer .aboutus {
+  display: block;
+  font-weight: 700;
+}
+.aboutus .leftcontainer h2 {
+  padding: 1em 0;
+}
+.aboutus .leftcontainer p {
+  padding: 0.5em 0;
+}
+.aboutus .rightcontainer {
+  flex: 0 0 300px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+  text-transform: uppercase;
+  background-color: black;
+  padding: 1em;
+  color: white;
+  text-align: center;
+  font-weight: 700;
+}
+.aboutus .rightcontainer img {
+  width: 100%;
+}
+
+.card {
+  background-color: white;
+  color: black;
+  border-radius: 0.5em;
+  padding: 1em;
+  min-width: 300px !important;
+  text-align: center;
+}
+.card svg {
+  height: 60px;
+  width: 60px;
+  margin-bottom: 1em;
+}
+.card:hover {
+  background-color: #ecb715;
+  color: white;
+  box-shadow: 0 0 5px 5px rgba(20, 20, 20, 0.451);
+}
+
+.service {
+  height: 100%;
+  position: relative;
+  background: url("/assets/footer.jpeg");
+  background-size: cover;
+  box-shadow: inset 0 0 2000px 2000px rgba(20, 20, 20, 0.451);
+  text-align: center;
+  padding: 2em 0;
+}
+.services {
+  padding: 2em;
+  color: white;
+}
+.service h2 {
+  padding: 1em 2em;
+  color: white;
+}
+.service .grid {
+  width: 100vw;
+  position: relative;
+  padding-bottom: 2em;
+}
+.service .grid .gridcontainer {
+  margin: 0 auto;
+  width: 300px;
+  height: 280px;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(300px, 1fr));
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+.service .grid .nxtbtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1em;
+}
+.service .grid .nxtbtn:hover {
+  transform: scale(1.5);
+}
+.service .grid .prevbtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1em;
+}
+.service .grid .prevbtn:hover {
+  transform: scale(1.5);
+}
+
+.teamcard {
+  text-align: center;
+  width: 100%;
+}
+.teamcard img {
+  width: 300px;
+}
+.teamcard h3 {
+  font-weight: normal;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  padding: 0.5em 0;
+}
+.teamcard h4 {
+  text-transform: uppercase;
+}
+.teamcard p {
+  text-align: center;
+  padding: 1em 0;
+}
+
+.team {
+  padding: 2em;
+  text-align: center;
+}
+.teamcontainer {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  justify-content: center;
+  align-items: center;
+  grid-gap: 3em;
+}
+
+.casecard {
+  position: relative;
+  width: 300px;
+  border-radius: 1em;
+  overflow: hidden;
+  text-align: center;
+}
+.casecard img {
+  width: 100%;
+  height: 100%;
+}
+.casecard .casedetails {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: absolute;
+  bottom: -300px;
+  padding: 1em;
+  background-color: rgb(165, 165, 165);
+  transition: all 0.3s;
+}
+.casecard .casedetails h3 {
+  color: white;
+  font-weight: 700;
+}
+.casecard:hover {
+  box-shadow: 0 0 5px 5px rgba(20, 20, 20, 0.451);
+}
+.casecard:hover .casedetails {
+  bottom: 0;
+}
+
+.casestudy {
+  padding: 0;
+}
+.casestudy .newsletter {
+  padding: 2em;
+  width: 100vw;
+  text-align: center;
+  background: url("/assets/footer.jpeg");
+  background-size: cover;
+  box-shadow: inset 0 0 0 2000px rgba(20, 20, 20, 0.451);
+}
+.casestudy .newsletter h2 {
+  color: white;
+  font-weight: 700;
+  padding: 0;
+}
+.casestudy .newsletter p {
+  color: white;
+  padding: 1em 0;
+}
+.casestudy .newsletter form {
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.casestudy .newsletter form input {
+  width: 100%;
+  background-color: white;
+  padding: 1em 2em;
+  border: none !important;
+  font-size: 1em;
+  border-radius: 2em;
+}
+.casestudy .newsletter form input:focus, .casestudy .newsletter form input:hover {
+  border: 0 !important;
+}
+.casestudy .newsletter form input:focus {
+  border: none !important;
+}
+.casestudy .newsletter form .button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  top: 8px;
+  right: 8px;
+  padding: 0.5em 1em;
+  position: absolute;
+  background-color: #ecb715;
+}
+.casestudys {
+  position: relative;
+  padding: 2em;
+  text-align: center;
+  height: 100%;
+}
+.casestudyscontainer {
+  margin: 0 auto;
+  width: 300px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(300px, 1fr));
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+.casestudys .casenxtbtn {
+  position: absolute;
+  top: 65%;
+  right: 0;
+}
+.casestudys .caseprevbtn {
+  position: absolute;
+  top: 65%;
+  left: 0;
+}
+
+footer {
+  width: 100vw;
+  text-align: center;
+}
+footer .contactform {
+  overflow: hidden;
+  margin-top: 2em;
+  position: relative;
+  width: 100%;
+  padding: 2em 1em;
+  box-shadow: 0 0 5px 5px rgba(20, 20, 20, 0.451);
+}
+footer .contactform form {
+  position: relative;
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer .contactform form .inputcontainer {
+  width: 350px;
+  position: relative;
+}
+footer .contactform form .inputcontainer input {
+  width: 100%;
+  position: relative;
+  padding: 1em;
+  border-radius: 5px;
+  background-color: rgb(165, 165, 165);
+  border: 1px solid gray;
+  font-size: 1em;
+}
+footer .contactform form .inputcontainer label {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  pointer-events: none;
+}
+footer .contactform form .inputcontainer textarea {
+  width: 100%;
+  position: relative;
+  padding: 1em;
+  border-radius: 5px;
+  background-color: rgb(165, 165, 165);
+}
+footer .contactform form .inputcontainer input:focus ~ label, footer .contactform form .inputcontainer textarea:focus ~ label,
+footer .contactform form .inputcontainer input:valid ~ label, footer .contactform form .inputcontainer #textarea:valid ~ label {
+  top: -3em;
+}
+footer .footer {
+  background: url("/assets/footer.jpeg");
+  background-size: cover;
+  box-shadow: inset 0 0 2000px 2000px rgba(20, 20, 20, 0.451);
+  width: 100vw;
+  padding: 2em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: white;
+  gap: 2em;
+}
+footer .footer .aboutus, footer .footer .contactus, footer .footer .newsletter {
+  flex: 0 0 350px;
+}
+footer .footer .aboutus h2, footer .footer .contactus h2, footer .footer .newsletter h2 {
+  margin: 0 auto;
+  padding: 0 !important;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-bottom: 3px solid #ecb715;
+  text-align: center;
+  font-weight: 700;
+  color: white;
+}
+footer .footer .contactus {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-self: center;
+  gap: 1em;
+  text-align: center;
+}
+footer .footer .newsletter form {
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+}
+footer .footer .newsletter form input {
+  width: 100%;
+  background-color: white;
+  padding: 1em 2em;
+  border: none !important;
+  font-size: 1em;
+  border-radius: 2em;
+}
+footer .footer .newsletter form input:focus, footer .footer .newsletter form input:hover {
+  border: 0 !important;
+}
+footer .footer .newsletter form input:focus {
+  border: none !important;
+}
+footer .footer .newsletter form .button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  top: 8px;
+  right: 8px;
+  padding: 0.5em 1em;
+  position: absolute;
+  background-color: #ecb715;
+}
+
+.hide {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero .carouselcontainer .container1 {
+    padding: 4em;
+  }
+  .hero .carouselcontainer .container1 h1, .hero .carouselcontainer .container1 p {
+    line-height: 1.5em;
+  }
+  .hero .carouselcontainer .container1 .buttonpair {
+    margin-top: 2em;
+  }
+  .service .grid .nxtbtn {
+    right: 5em;
+  }
+  .service .grid .prevbtn {
+    left: 5em;
+  }
+  .casestudys .casenxtbtn {
+    right: 5em;
+  }
+  .casestudys .caseprevbtn {
+    left: 5em;
+  }
+  footer .contactform {
+    border-radius: 1em;
+    margin: 2em auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 4em;
+  }
+  footer .contactform form {
+    gap: 3em;
+  }
+  footer .contactform form .inputcontainer {
+    width: 400px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .header {
+    padding: 3em;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .header nav {
+    border-radius: 3em;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    position: relative;
+    transform: translateX(0);
+  }
+  .header nav ul {
+    padding: 0.5em 2em;
+    gap: 2em;
+    justify-content: center;
+    flex-direction: row;
+  }
+  .header nav ul li {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .header nav ul .close {
+    display: none;
+  }
+  .header .menu {
+    display: none;
+  }
+  .hero {
+    top: -15em;
+  }
+  .hero .carouselcontainer .container1 {
+    padding: 7em;
+  }
+  .hero .carouselcontainer .container1 h1, .hero .carouselcontainer .container1 p {
+    line-height: 1.5em;
+  }
+  .hero .carouselcontainer .container1 .buttonpair {
+    margin-top: 2em;
+  }
+  .aboutus {
+    top: -3em;
+  }
+  .aboutus .leftcontainer {
+    max-width: 600px;
+  }
+  .team {
+    padding: 4em;
+  }
+  .card {
+    min-width: 250px !important;
+  }
+  .service .grid {
+    padding: 2em;
+  }
+  .service .grid .gridcontainer {
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0 2em;
+    grid-template-columns: repeat(3, minmax(200px, 1fr)) !important;
+    grid-template-rows: repeat(2, minmax(200px, 1fr));
+    gap: 2em;
+  }
+  .service .grid .nxtbtn, .service .grid .prevbtn {
+    display: none;
+  }
+  .casestudys {
+    padding: 4em;
+  }
+  .casestudyscontainer {
+    width: calc(900px + 4em);
+    gap: 2em;
+  }
+  footer .footer {
+    text-align: left;
+  }
+  footer .footer .aboutus, footer .footer .contactus, footer .footer .newsletter {
+    text-align: left !important;
+    justify-content: flex-start;
+  }
+  footer .footer .aboutus h2, footer .footer .contactus h2, footer .footer .newsletter h2 {
+    margin: 0;
+    text-align: left !important;
+  }
+  footer .footer .aboutus p, footer .footer .contactus p, footer .footer .newsletter p {
+    padding: 2em 0;
+    text-align: left;
+  }
+}/*# sourceMappingURL=main.css.map */

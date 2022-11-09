@@ -1,0 +1,711 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family:Montserrat;
+    box-sizing: border-box;
+}
+.loading{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #fff url('/assets/loading.gif') no-repeat center;
+    z-index: 99999;
+}
+$yellow-color : #ecb715;
+$black-color : black;
+$black-color2: rgba(20, 20, 20, 0.871);
+$white-color: white;
+$background-color: rgb(165, 165, 165);
+$services-section: rgba(20, 20, 20, 0.451);
+$newsletter: rgba(15, 15, 15, 0.502);
+html{
+    overflow-x: hidden;
+}
+body{
+    overflow-x: hidden;
+    width: 100vw; 
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    font-family: 'Roboto';
+}
+.sectionheading{
+    font-weight: 700;
+    font-size: 1em;
+    text-transform: uppercase;
+  }
+  h1{
+    font-size: 3em;
+    color: $black-color;
+    text-transform: uppercase;
+    font-weight: 900;
+    text-align: center;
+  }
+  h2{
+    font-size: 1.5em;
+    font-weight: 700;
+    color: $black-color;
+    padding: 1em 0;
+  }
+
+  h3{
+    font-size: 1em;
+  }
+  p{
+    text-align: center;
+    padding: 1em;
+  }
+  ul{
+    list-style: none;
+    li a{
+        color: $white-color;
+        text-decoration: none;
+    }
+  }
+  .yellow{
+    color: $yellow-color !important;
+    font-weight: 900;
+  }
+  .black{
+    font-weight: 700;
+  }
+.button{
+    padding: .5em 1em;
+    border-radius: 2em;
+    border: none;
+    background-color: $yellow-color;
+    color: black;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: 700;
+    &:hover{
+        background-color:$black-color ;
+        color: $yellow-color;
+    }
+  }
+  .header{
+    position: relative;
+    padding: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vw;
+    .logo{
+        font-size: 2em;
+        font-weight: 700;
+        color: white;
+    }
+    nav{
+        z-index: 999;
+        background-color: $yellow-color;
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        right: 0;
+        transform: translateX(100vw);
+        transition: all .3s ease-in-out;
+        ul{
+        position: relative;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        gap: 1em;
+        li {
+            width: 100%;
+            a{
+            display: block;
+            width: 100%;
+            text-align: center;
+            font-size: 2em;
+            font-weight: 500;
+            &:hover{
+                background-color: white;
+                color: $yellow-color;
+            }
+        }
+        }
+        .close{
+            position: absolute;
+            padding: 2em;
+            right: 0;
+            top: 0;
+        }
+    }
+        
+    }
+  }
+.show{
+    transform: translateX(0) !important;
+}
+  .hero{
+    height: 120vh;
+    background-color: $background-color;
+    z-index: -99;
+    position: relative;
+    top: -6.6em;
+    padding: 0;
+    margin-bottom: -6em;
+    .carouselcontainer{
+        display: flex;
+        width: 100vw;
+        height: 120vh;
+        background: url("/assets/footer.jpeg");
+        background-size: cover;
+        box-shadow: inset 0 0 2000px 2000px $services-section;
+        flex-direction: row;
+        scroll-behavior: smooth;
+        overflow: hidden;
+        animation-delay: 10s;
+        animation-name: carousel;
+        animation-duration: 60s;
+        animation-iteration-count: infinite;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+        .container1{
+            position: absolute;
+            margin: 0 auto;
+            top:30%;
+            h1,p{
+                color: white;
+            }
+            .buttonpair{
+                margin: 0 auto;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 1em;
+                .Registernow{
+                    background-color: $black-color;
+                    color: $yellow-color;
+                    &:hover{
+                        color: $black-color;
+                        background-color: $yellow-color;
+                    }
+                }
+            }
+        }
+    }
+  }
+@keyframes carousel{
+    0%{
+        background-image:url("/assets/meeting 1.jpeg") ;
+    }
+    25%{
+        background-image:url("/assets/meeting 2.jpeg") ;
+    }
+    50%{
+        background-image:url("/assets/meeting 3.jpeg") ;
+    }
+    75%{
+        background-image:url("/assets/meeting 6.jpeg") ;
+    }
+    100%{
+        background-image:url("/assets/meeting 4.jpeg") ;
+    }
+}
+section {
+    padding: 2em 2em;
+}
+.aboutus{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 50%;
+    flex-wrap: wrap;
+    gap: 2em;
+    .leftcontainer{
+        flex: 1;
+        text-align: center;
+        .aboutus{
+            display: block;
+            font-weight: 700;
+        }
+        h2{
+            padding: 1em 0;
+        }
+        p{
+            padding: .5em 0;
+        }
+    }
+    .rightcontainer{
+            flex:0 0 300px;
+            height: fit-content;
+            position: relative;
+            text-transform: uppercase;
+            background-color: $black-color;
+            padding: 1em;
+            color: $white-color;
+            text-align: center;
+            img{
+                width: 100%;
+            }
+            font-weight: 700;
+    }
+}
+.card{
+    background-color: $white-color;
+    color: $black-color;
+    border-radius: .5em;
+    padding: 1em;
+    min-width: 300px !important;
+    text-align: center;
+    svg{
+        height: 60px;
+        width: 60px;
+        margin-bottom: 1em;
+    }
+    &:hover{
+        background-color: $yellow-color;
+        color: white;
+        box-shadow: 0 0 5px 5px $services-section
+    }
+}
+.service{
+    height: 100%;
+    position: relative;
+    background: url("/assets/footer.jpeg");
+    background-size: cover;
+    box-shadow: inset 0 0 2000px 2000px $services-section;
+    text-align: center;
+    padding: 2em 0;
+    &s{
+        padding: 2em;
+        color: white;
+    }
+    h2{
+        padding: 1em 2em;
+        color: white;
+    }
+    .grid{
+        width: 100vw;
+        position: relative;
+        padding-bottom: 2em;
+    .gridcontainer{
+        margin: 0 auto;
+        width: 300px;
+        height: 280px;
+        display: grid;
+        grid-template-columns: repeat(6, minmax(300px, 1fr));
+        overflow: hidden;
+        scroll-behavior: smooth;
+    }
+    .nxtbtn{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 1em;
+        &:hover{
+            transform: scale(1.5);
+        }
+    }
+    .prevbtn{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 1em;
+        &:hover{
+            transform: scale(1.5);
+        }
+    }
+    }
+}
+
+.teamcard{
+    text-align: center;
+    width: 100%;
+    img{
+        width: 300px;
+    }  
+    h3{
+        font-weight: normal;
+        font-size: 1.5em;
+        text-transform: uppercase;
+        padding: .5em 0;
+    } 
+    h4{
+        text-transform: uppercase;
+    }
+    p{
+        text-align: center;
+        padding: 1em 0;
+    }
+}
+.team{
+    padding: 2em;
+    text-align: center;
+    &container{
+        display: grid;
+        grid-template-columns: repeat(3, minmax(300px, 1fr));
+        justify-content: center;
+        align-items: center;
+        grid-gap: 3em;
+    }
+}
+.casecard{
+    position: relative;
+    width: 300px;
+    border-radius: 1em;
+    overflow: hidden;
+    text-align: center;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+    .casedetails{
+        width: 100%;
+        height: fit-content;
+        position: absolute;
+        bottom: -300px;
+        padding:1em;
+        background-color: $background-color;
+        transition: all .3s;
+        h3{
+            color: $white-color;
+            font-weight: 700;
+        }
+    }
+    &:hover {
+        box-shadow: 0 0 5px 5px $services-section;
+        .casedetails{
+            bottom: 0;
+        }
+    }
+}
+@mixin newsletter {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto;
+    input{
+        width: 100%;
+        background-color: $white-color;
+        padding: 1em 2em;
+        border: none !important;
+        font-size: 1em;
+        border-radius: 2em;
+        &:focus,&:hover{
+            border: 0 !important;
+        }
+    }
+    input:focus{
+        border: none !important;
+    }
+    .button{
+        width: fit-content;
+        top: 8px;
+        right: 8px;
+        padding: .5em 1em;
+        position: absolute;
+        background-color:$yellow-color ;
+    }
+}
+.casestudy{
+    padding: 0;
+    .newsletter{
+        padding: 2em;
+        width: 100vw;
+        text-align: center;
+        background: url("/assets/footer.jpeg");
+        background-size: cover;
+        box-shadow: inset 0 0 0 2000px $services-section;
+        h2{
+            color: $white-color;
+            font-weight: 700;
+            padding: 0;
+        }
+        p{
+            color: $white-color;
+            padding: 1em 0;
+        }
+        form{
+           @include newsletter()
+        }
+    }
+    &s{
+        position: relative;
+        padding: 2em;
+        text-align: center;
+        height: 100%;
+        &container{
+        margin: 0 auto;
+        width: 300px;
+        height: fit-content;
+        display: grid;
+        grid-template-columns: repeat(6, minmax(300px, 1fr));
+        overflow: hidden;
+        scroll-behavior: smooth;
+        }
+        .casenxtbtn{
+            position: absolute;
+            top:65%;
+            right:0
+        }
+        .caseprevbtn{
+            position: absolute;
+            top:65%;
+            left: 0;
+        }
+    }
+    
+}
+@mixin footer {
+    flex: 0 0 350px;
+    h2{
+        margin: 0 auto;
+        padding: 0 !important;
+        width: fit-content;
+        border-bottom: 3px solid $yellow-color;
+        text-align: center;
+        font-weight: 700;
+        color: white;
+    }
+}
+footer{
+    width: 100vw;
+    text-align: center;
+    .contactform{
+        overflow: hidden;
+        margin-top: 2em;
+        position: relative;
+        width: 100%;
+        padding: 2em 1em;
+        box-shadow: 0 0 5px 5px $services-section;
+        form{
+            position: relative;
+            display: flex;
+            gap: 1em;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .inputcontainer{
+                width: 350px;
+                position: relative;
+                input{
+                    width: 100%;
+                    position: relative;
+                    padding: 1em;
+                    border-radius: 5px;
+                    background-color: $background-color;
+                    border: 1px solid gray;
+                    font-size: 1em;
+                }        
+                label{
+                    position: absolute;
+                    top: 1em;
+                    left: 1em;
+                    pointer-events: none;
+                }
+                textarea{
+                    width: 100%;
+                    position: relative;
+                    padding: 1em;
+                    border-radius: 5px;
+                    background-color: $background-color;
+                }
+                input:focus ~ label, textarea:focus ~ label,
+                input:valid ~ label, #textarea:valid ~ label
+                {
+                    top:-3em;
+                }
+                
+            }
+
+            
+        }
+    }
+    .footer{
+        background: url("/assets/footer.jpeg");
+        background-size: cover;
+        box-shadow: inset 0 0 2000px 2000px $services-section;
+        width: 100vw;
+        padding: 2em;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        color: white;
+        gap: 2em;
+        .aboutus,.contactus,.newsletter{
+            @include footer
+        }
+        .contactus{
+            display: flex;
+            flex-direction: column;
+            justify-self: center;
+            align-self: center;
+            gap: 1em;
+            text-align: center;
+        }
+        .newsletter{
+            form{
+            @include newsletter()
+            }
+        }
+    }
+}
+.hide{
+    display: none;
+}
+@media only screen and (min-width:768px) {
+    .hero{
+        .carouselcontainer{
+            .container1{
+                padding: 4em;
+                h1,p{
+                    line-height: 1.5em;
+                }
+                .buttonpair{
+                    margin-top: 2em;
+                }
+            }
+        }
+    }
+    .service{
+        .grid{
+            .nxtbtn{
+                right: 5em;
+            }
+            .prevbtn{
+                left: 5em;
+            }
+        }
+    }
+    .casestudy{
+        &s{
+            .casenxtbtn{
+                right:5em
+            }
+            .caseprevbtn{
+                left: 5em;
+            }
+        }
+    }
+    footer{
+        .contactform{
+            border-radius: 1em;
+            margin: 2em auto;
+            width: fit-content;
+            padding: 4em;
+            form{
+                gap: 3em;
+                .inputcontainer{
+                    width: 400px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width:1024px ) {
+    @mixin  footer {
+        justify-content: flex-start;
+        h2{
+            
+            margin: 0;
+            text-align: left !important;
+        }
+    }
+    .header{
+        padding: 3em;
+        justify-content: space-evenly;
+        align-items: center;
+        nav{
+            border-radius: 3em;
+            width: fit-content;
+            height: fit-content;
+            position: relative;
+            transform: translateX(0);
+            ul{
+                padding: .5em 2em;
+                gap: 2em;
+                justify-content: center;
+                flex-direction: row;
+                li{
+                    width: fit-content;
+                }
+                .close{
+                    display: none;
+                }
+            }
+        }
+        .menu{
+            display: none;
+        }
+    }
+    .hero{
+        top: -15em;
+        .carouselcontainer{
+            .container1{
+                padding: 7em;
+                h1,p{
+                    line-height: 1.5em;
+                }
+                .buttonpair{
+                    margin-top: 2em;
+                }
+            }
+        }
+    }
+    .aboutus{
+        top: -3em;
+        .leftcontainer{
+            max-width: 600px;
+        }
+    }
+    .team{
+        padding: 4em;
+    }
+    .card{
+        min-width: 250px !important;
+    }
+    .service{
+        .grid{
+            padding: 2em;
+        .gridcontainer{
+            width: 100% !important;
+            height: 100% !important;
+            padding: 0 2em;
+            grid-template-columns: repeat(3, minmax(200px, 1fr)) !important;
+            grid-template-rows: repeat(2, minmax(200px, 1fr));
+            gap: 2em;
+        }
+        .nxtbtn,.prevbtn{
+            display: none;
+        }
+    }
+    }
+    .casestudy{
+        &s{
+            padding: 4em;
+            &container{
+                width: calc(900px + 4em);
+                gap: 2em;
+               
+            }
+        }
+    }
+    footer{
+        .footer{
+            text-align: left;
+            .aboutus,.contactus,.newsletter{
+                text-align: left !important;
+                @include footer;
+                p{
+                    padding: 2em 0;
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
+
+
+
+  
